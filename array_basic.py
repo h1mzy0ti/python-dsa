@@ -8,5 +8,5 @@ def removing_dup(arr):
 
     return list(set(arr))
 
-arr = [1,2,3,4,1,4]
+arr = [1,2,3,4,1,4,4,4,4,4,4,4]
 print(removing_dup(arr)) 
