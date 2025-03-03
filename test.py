@@ -1,19 +1,6 @@
-def twoSum( nums, target):
-        nums.sort()
+def min_max(arr):
+    int_arr = list(map(int, arr))  # Convert strings to integers
+    return min(int_arr), max(int_arr)
 
-        left, right = 0, len(nums) -1
-
-        while left < right:
-            sum = nums[left] + nums[right]
-
-            if sum == target:
-                return True 
-            elif sum < target:
-                left += 1
-            else:
-                right -= 1
-        return False
-
-nums = [2,7,11,15]
-target = 9
-print(twoSum(nums,target))
+arr = ["1", "2", "3", "4", "5", "6", "7"]
+print(min_max(arr))
