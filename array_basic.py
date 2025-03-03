@@ -4,13 +4,9 @@ def removing_dup(arr):
 
     for i in range(len(arr)):
         if arr[i] not in final:
-            final.add(i)
-        if 0 in final:
-            final.remove(0)
+            final.add(arr[i])
 
-    fi = list(final)
-
-    return fi
+    return list(set(arr))
 
 arr = [1,2,3,4,1,4]
-print(removing_dup(arr))
+print(removing_dup(arr)) 
