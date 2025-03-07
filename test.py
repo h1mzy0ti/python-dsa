@@ -1,6 +1,19 @@
-def min_max(arr):
-    int_arr = list(map(int, arr))  # Convert strings to integers
-    return min(int_arr), max(int_arr)
+arr = [1,2,,3,4]
+target = 5
+def two_pointer(arr,target):
+    left = 0
+    right = len(arr) - 1
 
-arr = ["1", "2", "3", "4", "5", "6", "7"]
-print(min_max(arr))
+    while left < right:
+        sum = arr[left] + arr[right]
+        if sum == target:
+            return [left,right]
+        elif sum > target:
+            right -= 1
+        else:
+            left += 1
+    return False
+
+print(two_pointer(arr,target))
+
+# ONly use two pointer when the array is sorted

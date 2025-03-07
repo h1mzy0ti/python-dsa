@@ -1,3 +1,5 @@
+# Use only when the array is sorted
+
 def two_pointer(arr,target):
 
     left, right = 0, len(arr) - 1
