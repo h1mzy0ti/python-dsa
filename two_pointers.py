@@ -1,6 +1,5 @@
 def two_pointer(arr,target):
 
-    arr.sort()
     left, right = 0, len(arr) - 1
 
     while left<right:
@@ -15,6 +14,6 @@ def two_pointer(arr,target):
 
     return False
 
-arr = [1,3,4,56,7,55,44,89]
-target = 111
+arr = [1,3,4,7,55,89]
+target = 5
 print(two_pointer(arr,target))
