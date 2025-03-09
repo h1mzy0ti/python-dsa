@@ -2,11 +2,11 @@ def binary_search(arr,target):
     left, right = 0, len(arr) -1
 
     while left <= right:
-        mid = left + (right - left ) // 2
+        mid = left + (right - left ) // 2   #OR MID = LEFT + RIGHT // 2 (but not good when the array range is large)
         if arr[mid] == target:
             return mid
         elif arr[mid] < target:
-            left += 1
+            left += 12
         else: right -= 1
     return -1 
 
