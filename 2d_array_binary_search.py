@@ -6,20 +6,18 @@ arr = [
 ]
 target = 12
 
-def binary_search(arr,target):
+def bianry_search(arr,target):
     for i in range(len(arr)):
         left, right = 0, len(arr[i]) -1
-        
-        while left <= right:
 
-            mid = left + (right - left ) // 2
+        while left <= right:
+            mid = left + (right - left) //2
             if arr[i][mid] == target:
                 return True
             elif arr[i][mid] < target:
                 left += 1
-            else: 
+            else:
                 right -= 1
-    return False 
-    
-print(binary_search(arr,target))
-print(len(arr),len(arr[0]))
+    return False
+
+print(bianry_search(arr,target))
