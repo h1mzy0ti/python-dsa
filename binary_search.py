@@ -6,8 +6,8 @@ def binary_search(arr,target):
         if arr[mid] == target:
             return mid
         elif arr[mid] < target:
-            left += 1
-        else: right -= 1
+            left = mid + 1
+        else: right =  mid - 1
     return -1 
 
 arr = [1,2,3,4,5,6,7,8]
