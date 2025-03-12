@@ -4,7 +4,7 @@ def check_occ(arr,check_num):
     check_num = int(check_num)
     count = 0
     for i in int_arr:
-        if i ==  check_num: 
+        if i ==  check_num:
             count += 1
     return count
     
