@@ -5,7 +5,6 @@ def threesum(nums):
         if i > 0 and a == nums[i - 1]:
             continue
 
-
         l,r = i + 1, len(nums) -1
         while l < r:
             threesum =  a + nums[l] + nums[r]
