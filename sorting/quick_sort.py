@@ -1,4 +1,4 @@
-E = [-5, 3, 2, 1, -3, -3, 7, 2, 2]
+arr = [-5, 3, 2, 1, -3, -3, 7, 2, 2]
 
 def quick_sort(arr):
   if len(arr) <= 1:
@@ -13,5 +13,4 @@ def quick_sort(arr):
   R = quick_sort(R)
 
   return L + [p] + R
-
-print(quick_sort(E))
+print(quick_sort(arr))
