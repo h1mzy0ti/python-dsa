@@ -1,10 +1,22 @@
-arr = [23,4,2,12,-12]
-def bubbleSort(arr):
+arr = [2,3,4,5,6,5]
+k = 2
+def sliding_window(arr,k):
+    n = len(arr)
+    if n < k:
+        return -1
+    elif n == 1:
+        return arr
+    
 
-    n = len(arr) -1
-    for i in range(n):
-        for j in range(n-i-1):
-            if arr[j] > arr[j+1]:
-                arr[j], arr[j+1] = arr[j+1], arr[j]
-    return arr
-print(bubbleSort(arr))
+    window_sum = sum(arr[:k])
+    max_sum = window_sum
+
+    for i in range (k,n):
+        window_sum += arr[i]
+        window_sum -= arr[i - k]
+
+        max_sum = max(window_sum,max_sum)
+
+    return max_sum
+
+print(sliding_window(arr,k))
