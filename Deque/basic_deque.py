@@ -6,7 +6,7 @@ dq = deque()
 '''
 dq.append(x)        Add to right
 dq.appendleft(x)    Add to left
-dq.pop()            Remove from right
+dq.pop()            Remove from right 
 dq.popleft()        Remove from left
 
 '''
