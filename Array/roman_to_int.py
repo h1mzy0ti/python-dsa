@@ -17,7 +17,7 @@ Given a roman numeral, convert it to an integer.
 '''
 s = "IV"
 
-def roman_to_int(arr):
+def roman_to_int(s) -> int:
     value_map = {
         "I": 1, 
         "V": 5, "X": 10,
@@ -35,5 +35,5 @@ def roman_to_int(arr):
             total += current
         previous = current
     return total
+
 print(roman_to_int(s))
-            
