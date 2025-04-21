@@ -1,5 +1,5 @@
-word1 = "abc"
-word2 = "pqrt"
+word1 = "ababab"
+word2 = "cdcdcd"
 # Expected oputput = apbqcr
 
 def mergeAlternately(word1: str, word2: str) -> str:
