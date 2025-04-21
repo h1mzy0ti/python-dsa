@@ -17,7 +17,7 @@ Given a roman numeral, convert it to an integer.
 '''
 s = "IV"
 
-def roman_to_int(s) -> int:
+def roman_to_int(s:str) -> int:
     value_map = {
         "I": 1, 
         "V": 5, "X": 10,
