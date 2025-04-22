@@ -19,6 +19,9 @@ def isSubsequence( s: str, t: str) -> bool:
         if p < sl and s[p] == char:                 # if element of p == char then p + 1
             p += 1  
                                                     # if not then return to the the loop again to complete the iteration of char in t
-    return  p == len(s)                             # then return if the value of p is == to lenght of s or sl(len)
+    return  p == sl                             # then return if the value of p is == to lenght of s or sl(len)
 
 print(isSubsequence(s,t))
+
+
+

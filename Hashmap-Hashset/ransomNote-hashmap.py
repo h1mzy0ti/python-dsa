@@ -17,7 +17,13 @@ Example 3:
 
 Input: ransomNote = "aa", magazine = "aab"
 Output: true
+
+
+Need to handle the frequency so hashmap is usefull here
 '''
+
+
+r = "aa", m = "ab"
 
 def canConstruct(ransomNote,magazine) -> bool:
         

@@ -10,7 +10,3 @@ Input: strs = ["flower","flow","flight"]
 Output: "fl"
 
 '''
-strs = ["flower","flow","flight"]
-
-def longestCommonPrefix(strs):
-    
