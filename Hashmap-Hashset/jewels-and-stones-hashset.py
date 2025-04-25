@@ -15,6 +15,7 @@ Input: jewels = "z", stones = "ZZ"
 Output: 0
 
 dont have to count the frequency since the jewels are not repitative so hashset or set is usefull here
+But we have to use set here for decreasing the time complexity
 
 '''
 
