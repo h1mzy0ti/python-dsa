@@ -42,7 +42,7 @@ def calPoints(operations):
 
             elif element == "D":
                 if res_stack:
-                    res_stack.append(2*res_stack[-1])
+                    res_stack.append(2*res_stack[-1])                               # Here pop will remove and we dont want that
 
             elif element == "+":
                 if res_stack:
