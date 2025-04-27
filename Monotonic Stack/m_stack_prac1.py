@@ -12,9 +12,7 @@ for n in range(len(arr)):
     stack.append(n)
 
 
-
-
-
+print(result)
 
 
 
