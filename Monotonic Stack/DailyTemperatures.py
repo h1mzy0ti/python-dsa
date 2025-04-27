@@ -7,7 +7,10 @@ Example 1:
 Input: temperatures = [30,40,50,60]
 Output: [1,1,1,0]
 
+Almost simialr to next greater element
+
 '''
+
 temperatures = [73,74,75,71,69,72,76,73]
 
 

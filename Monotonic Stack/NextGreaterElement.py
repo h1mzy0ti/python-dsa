@@ -1,4 +1,5 @@
 # Monotonic Stack (Next Greater Element) same array
+# Similar to Dialy Temperatures
 
 arr = [2, 1, 3]
 
