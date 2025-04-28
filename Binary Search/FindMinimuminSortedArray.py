@@ -19,22 +19,21 @@ Output: 1
 Explanation: The original array was [1,2,3,4,5] rotated 3 times.
 
 '''
-nums = [4,5,6,7,0,1,2]
+nums = [11,13,15,17]
 
 def findMin(nums):
     left, right = 0, len(nums) -1                           # Typical Binary search initialization
 
-    while left < right:
+    while left < right:                                     # Main condition for the loop
         mid = left + (right - left) // 2
-        
-        if nums[right] >= nums[mid]:
-            right = mid
+                                                            # Here we know that half part of the array is sorted
+        if nums[right] >= nums[mid]:                        # If right is greater than the mid than we know it is on the other side (left)
+            right = mid                                     # Here we know the right is less than mid, so we pass it to the next for left
             
-        elif nums[left] <= nums[mid]:
-            left = mid + 1
+        elif nums[left] <= nums[mid]:                       # If left is smaller than the mid we know  it is in the other side of the mid since the right passed it
+            left = mid + 1                                  # Than we pass left to be the mid+1 since the mid is already checked
 
-    return nums[mid]
-
+    return nums[left]
 
 print(findMin(nums))
 
