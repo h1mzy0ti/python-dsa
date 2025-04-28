@@ -25,7 +25,5 @@ def isPerfectSquare(num):
             right = mid - 1
     return False
 
-    
-
 
 print(isPerfectSquare(num))
