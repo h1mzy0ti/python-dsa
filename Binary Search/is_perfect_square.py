@@ -11,16 +11,20 @@ Output: true
 Explanation: We return true because 4 * 4 = 16 and 4 is an integer.
 
 '''
+
 num = 16
 def isPerfectSquare(num):
     left, right = 0, num
 
     while left <= right:
         mid = left + (right - left) // 2
+
         if mid * mid == num:
             return True
+        
         elif mid * mid < num:
             left = mid + 1
+
         else:
             right = mid - 1
     return False
