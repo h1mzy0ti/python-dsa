@@ -12,3 +12,23 @@ Output: 2
 Explanation: The smallest element common to both arrays is 2, so we return 2.
 
 '''
+
+nums1 = [1,2,3]
+nums2 = [2,4]
+def getCommon(nums1, nums2):
+    n1l, n2l = len(nums1), len(nums2)
+    num1P, num2P = 0, 0
+    
+
+    while num1P < n1l and num2P < n2l:
+        if nums1[num1P] == nums2[num2P]:
+            return nums1[num1P]
+        
+        elif nums1[num1P] < nums2[num2P]:
+            num1P += 1
+        else:
+            num2P += 1
+    return -1
+
+
+print(getCommon(nums1,nums2))
