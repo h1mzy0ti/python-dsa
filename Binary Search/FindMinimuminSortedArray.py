@@ -19,9 +19,10 @@ Output: 1
 Explanation: The original array was [1,2,3,4,5] rotated 3 times.
 
 '''
-nums = [11,13,15,17]
+nums = [3,4,5,1,2]
 
-def findMin(nums):
+def findMin(nums):                                          # here we dont know the target so we do comapre wth the mid
+   
     left, right = 0, len(nums) -1                           # Typical Binary search initialization
 
     while left < right:                                     # Main condition for the loop
