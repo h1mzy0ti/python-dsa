@@ -46,3 +46,6 @@ def search(nums, target):                                       # Here we have a
     return -1        
 
 print(search(nums,target))
+
+#Time = O(log n)
+# Space = O(1)
