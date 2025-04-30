@@ -17,16 +17,17 @@ Output: false
 '''
 c = 3
 def judgeSquareSum(c):
-    left, right = 0, int(c ** 0.5) 
+    left, right = 0, int(c ** 0.5)                                                  # Right is equal to the square root of c
 
     while left <= right:
-        sum_square = left * left + right * right
+        sum_square = left * left + right * right                                    # The original statement( a * a + b * b)
 
-        if sum_square == c:
+        if sum_square == c:                                                         # If the sum matches the int than return true
             return True
-        elif sum_square < c:
+        
+        elif sum_square < c:                                                        # if the sum is less than c increase the left
             left += 1
-        else: 
+        else:                                                                       # and if the sum is greater than c decrease the right
             righ -= 1
     return False
 
