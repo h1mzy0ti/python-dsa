@@ -15,18 +15,3 @@ Output: [9,4]
 Explanation: [4,9] is also accepted.
  
 '''
-nums1 = [1,2,2,1]
-w = [2,2]
-
-def intersection(nums1, nums2):
-        res = []
-        n1set,n2set = set(nums1),set(nums2)
-
-        for v in n2set:
-            if v in n1set:
-                res.append(v)
-
-        return res
-
-print(intersection(nums1,w))
-
