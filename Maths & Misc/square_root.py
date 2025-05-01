@@ -11,3 +11,29 @@ Explanation: The square root of 4 is 2, so we return 2.
 Example 2:
 
 '''
+x = 8
+def mySqrt(x):
+    left,right = 0, x
+    res = 0
+
+    while left<= right:
+        mid = left + (right - left) // 2
+
+        if mid * mid == x:
+            return mid
+
+        elif mid * mid > x:
+           right =  mid - 1
+
+        else:
+            left = mid + 1
+            res = mid
+        
+    return res
+    
+        
+
+print(mySqrt(x))
+
+
+
