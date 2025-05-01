@@ -1,32 +1,17 @@
-'''
 
-Intersection of Two Arrays
+c = 5
+def judgeSquareSum(c):
+    left, right = 0, int(c**0.5)
+    
+    while left <= right:
+        sumss = left * left + right * right
 
-Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must be unique and you may return the result in any order.
+        if sumss == c:
+            return True
+        elif sumss < c:
+            left += 1
+        else:
+            right -= 1
+    return False
 
-Example 1:
-
-Input: nums1 = [1,2,2,1], nums2 = [2,2]
-Output: [2]
-Example 2:
-
-Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
-Output: [9,4]
-Explanation: [4,9] is also accepted.
- 
-'''
-nums1 = [1,2,2,1]
-w = [2,2]
-
-def intersection(nums1, nums2):
-        res = []
-        n1set,n2set = set(nums1),set(nums2)
-
-        for v in n2set:
-            if v in n1set:
-                res.append(v)
-
-        return res
-
-print(intersection(nums1,w))
-
+print(judgeSquareSum(c))

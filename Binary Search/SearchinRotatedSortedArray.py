@@ -31,21 +31,20 @@ def search(nums, target):                                       # Here we have a
         if nums[mid] == target:
             return mid
         
-        if  nums[left] <= nums[mid]:                             # Left is sorted
-            if nums[left] <= target < nums[mid]:
+        if  nums[left] <= nums[mid]:                             # Left is sorted / condition 1
+            if nums[left] <= target < nums[mid]:                 # Nested condition 1.1
                 right = mid - 1
-            else:
+            else:                                                # Nested conditon 1.2
                 left = mid + 1
 
-        else:                                                     # Right is sorted - nums[right] >= nums[mid]
-            if nums[right] >= target > nums[mid]:
+        else:                                                    # Right is sorted - nums[right] >= nums[mid] / Condition 2
+            if nums[right] >= target > nums[mid]:                # Nested condition 2.1
                 left = mid + 1
-            else:
+            else:                                                # Nested condition 2.2
                 right = mid - 1
-
     return -1        
 
 print(search(nums,target))
 
-#Time = O(log n)
+# Time = O(log n)
 # Space = O(1)

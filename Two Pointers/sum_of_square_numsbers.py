@@ -30,6 +30,7 @@ def judgeSquareSum(c):
         else:                                                                       # and if the sum is greater than c decrease the right
             righ -= 1
     return False
+    
 
   
 print(judgeSquareSum(c))

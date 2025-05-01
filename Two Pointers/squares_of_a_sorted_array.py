@@ -52,8 +52,8 @@ def sortedSquares(nums):
             result[n - 1] = nums[right] ** 2
             right -= 1
         n -= 1                                                           # decreases the size by the size of nums by 4, 3, 2,1, 0
-        print(n)                                                         # for printing it out                                                          
+                                                                                                                                    
 
-    return result
+    return result                                                           # for printing it out 
 
 print(sortedSquares(nums))
