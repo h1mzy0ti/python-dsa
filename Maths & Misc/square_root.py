@@ -14,22 +14,22 @@ Example 2:
 x = 8
 def mySqrt(x):
     left,right = 0, x
-    res = 0
+    res = 0                                                     # Since the output might be in flot so we dont have to retur nthe float but the closest
 
     while left<= right:
         mid = left + (right - left) // 2
 
-        if mid * mid == x:
+        if mid * mid == x:                                      # Simple case if mid is x
             return mid
 
-        elif mid * mid > x:
+        elif mid * mid > x:                                     # if mid * mid is greater than x (we knwo it ant be so we decrease the right by mid - 1)
            right =  mid - 1
 
-        else:
+        else:                                                   # if mid * mid < x (it is poosbile candidate so we store that and if not we + left with mid)
             left = mid + 1
             res = mid
         
-    return res
+    return res                                                  # if nothing works in the above we return res since the last iteration will be the smallest one
     
         
 
