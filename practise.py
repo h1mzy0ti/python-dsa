@@ -1,17 +1,18 @@
+arr = [2, 1, 5, 1, 3, 2,23]
+k = 3
 
-c = 5
-def judgeSquareSum(c):
-    left, right = 0, int(c**0.5)
+def sliding_window(arr,k):
+    n = len(arr)
+    if n < k:
+        return -1
     
-    while left <= right:
-        sumss = left * left + right * right
+    #step1
+    window_sum = sum(arr[:k])
+    max_sum = window_sum
 
-        if sumss == c:
-            return True
-        elif sumss < c:
-            left += 1
-        else:
-            right -= 1
-    return False
+    for i in range(k,n):
+        window_sum = window_sum - arr[i - k] + arr[i]
+        max_sum = max(max_sum,window_sum)
 
-print(judgeSquareSum(c))
+    return max_sum
+print(sliding_window(arr,k))
