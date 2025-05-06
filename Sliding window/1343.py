@@ -34,8 +34,4 @@ def numOfSubarrays(arr,k,threshold):
 
 
 
-
-
-
-
 print(numOfSubarrays(arr,k,threshold))
