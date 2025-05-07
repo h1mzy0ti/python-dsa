@@ -16,4 +16,22 @@ Explanation: The longest nice subarray is [3,8,48]. This subarray satisfies the 
 nums = [1,3,8,48,10]
 
 def longestNiceSubarray(nums):
+    n = len(nums)
+    left = 0
+    bitmask = 0
+    max_substring = 0
+   
+
+    for right in range(n):
+        while (bitmask & nums[right]) != 0:
+            bitmask ^= nums[left]                                                               # remove nums[left] from bitmask
+            left += 1
+        
+        bitmask |= nums[right]
+        max_substring = max(max_substring, right - left + 1)
+        
+    return max_substring 
+
+
+
 print(longestNiceSubarray(nums))
