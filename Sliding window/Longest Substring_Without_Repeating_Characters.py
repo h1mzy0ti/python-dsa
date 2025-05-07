@@ -17,22 +17,17 @@ def lengthOfLongestSubstring(s):
     left = 0                                                        # to decrease the size 
     max_sub = 0                                                     # to count the size 
 
-    for right in range(n):
-        while s[right] in res:
-            res.discard(s[left])
+    for right in range(n):                                          # looping through the size of s
+        while s[right] in res:                                      # if found duplicate then
+            res.discard(s[left])                                    # shrink the size by left
             left += 1
 
-        res.add(s[right])
-        max_sub = max(max_sub,right - left + 1)
+        res.add(s[right])                                           # adding the elements
+        max_sub = max(max_sub,right - left + 1)                     # and counting the length
             
 
-    return max_sub
+    return max_sub  
             
-
-
-
-
-
 
 
 print(lengthOfLongestSubstring(s))
