@@ -9,7 +9,7 @@ Output: 3
 Explanation: The answer is "abc", with the length of 3.
 
 '''
-s = "pwwkew"
+s = "abcabcbb"
 def lengthOfLongestSubstring(s):
     n = len(s)
     res = set()                                                     # set to not store duplicate
@@ -19,7 +19,7 @@ def lengthOfLongestSubstring(s):
 
     for right in range(n):                                          # looping through the size of s
         while s[right] in res:                                      # if found duplicate then
-            res.discard(s[left])                                    # shrink the size by left
+            res.remove(s[left])                                    # shrink the size by left
             left += 1
 
         res.add(s[right])                                           # adding the elements
