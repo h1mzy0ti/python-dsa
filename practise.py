@@ -1,18 +1,19 @@
-arr = [2, 1, 5, 1, 3, 2,23]
-k = 3
+nums = [2,3,1,2,4,3]
+target = 7
 
-def sliding_window(arr,k):
-    n = len(arr)
-    if n < k:
-        return -1
-    
-    #step1
-    window_sum = sum(arr[:k])
-    max_sum = window_sum
+def minSubArrayLen(nums, target):
+    n = len(nums)
+    left = 0
+    current_sum = 0
+    min_length = float('inf')
 
-    for i in range(k,n):
-        window_sum = window_sum - arr[i - k] + arr[i]
-        max_sum = max(max_sum,window_sum)
+    for right in range(n):
+        current_sum += nums[right]
 
-    return max_sum
-print(sliding_window(arr,k))
+        while current_sum >= target:
+            min_length = min(min_length, right - left + 1)
+            current_sum -= nums[left]
+            left += 1
+    return min_length
+
+print(minSubArrayLen(nums,target))
