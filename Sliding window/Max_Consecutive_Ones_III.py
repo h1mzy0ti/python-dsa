@@ -9,3 +9,11 @@ Explanation: [1,1,1,0,0,1,1,1,1,1,1]
 Bolded numbers were flipped from 0 to 1. The longest subarray is underlined.
 
 '''
+nums = [1,1,1,0,0,0,1,1,1,1,0]
+k = 2
+
+def longestOnes(nums,k):
+
+
+
+print(longestOnes(nums,k))
