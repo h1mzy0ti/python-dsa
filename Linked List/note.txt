@@ -4,9 +4,9 @@ Insert at beginning             D
 
 Insert at end                   D                                   
 
-Insert at a given position (before the position or after the position)
+Insert at a given position (before the position or after the position) D
 
-Delete by value
+Delete by value                 D
 
 Delete by position
 
