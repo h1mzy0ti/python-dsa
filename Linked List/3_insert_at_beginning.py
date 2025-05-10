@@ -9,9 +9,9 @@ class LinkedList:
 
     def append(self,data):                                      # Insert ata the ebginning or every new  will be head untill new node ocmes in
 
-        new_node = Node(data)
-        new_node.next = self.head
-        self.head = new_node
+        new_node = Node(data)                                   
+        new_node.next = self.head                               # First set the new node's next o current head
+        self.head = new_node                                    # After doing the above step now the head is set to the new_node
         
     def traverse(self):
         current = self.head
