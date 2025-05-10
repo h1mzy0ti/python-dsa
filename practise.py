@@ -1,23 +1,49 @@
-nums = [1,1,1,0,0,0,1,1,1,1,0]
-k = 2
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None
 
-def longestOnes(nums,k):
-    n = len(nums)
-    left = 0
-    maximum = 0
-    zero_count = 0
+class LinkedList:
+    def __init__(self):
+        self.head = None
+    
+    def append(self,data):
+        new_node = Node(data)
 
-    for right in range(n):
+        if not self.head:
+            self.head = new_node
+            return
+        
+        current = self.head
+        while current.next:
+            current = current.next
+        current.next = new_node
 
-        if nums[right] == 0:
-            zero_count += 1
+    def traverse(self):
 
-            while zero_count > k:
-                if nums[left] == 0:
-                    zero_count -= 1
-                left += 1
+        current = self.head
+        while current:
+            print(current.data,end="  ->  ")
+            current = current.next
+        print("None")
 
-        maximum = max(maximum,right - left + 1)
-    return maximum
+    def delete(self):
+        current = self.head
+        while current.next:
+            current = current.next
+        current.next = None
 
-print(longestOnes(nums,k))
+
+ll= LinkedList()
+
+ll.append(213)
+
+ll.append(4)
+
+ll.append("e")
+
+ll.append(21344)
+
+ll.traverse()
+ll.delete()
+ll.traverse()
