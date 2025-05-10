@@ -12,3 +12,16 @@ Explanation: s2 contains one permutation of s1 ("ba")
 s1 = "ab"
 s2 = "eidbaooo"
 def checkInclusion(s1,s2):
+
+
+
+
+
+
+
+
+
+
+
+
+print(checkInclusion(s1,s2))

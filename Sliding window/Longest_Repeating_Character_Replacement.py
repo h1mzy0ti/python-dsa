@@ -14,7 +14,7 @@ k = 2
 
 def characterReplacement(s, k):
     n = len(s)
-    count = [0] * 26  # For 'A' to 'Z'
+    count = [0] * 26 
     left = 0
     max_freq = 0
     max_len = 0
