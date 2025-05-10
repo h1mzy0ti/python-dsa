@@ -1,0 +1,17 @@
+Key Operations ( Must Know)
+
+Insert at beginning         
+
+Insert at end                                           
+
+Insert at a given position (before the position or after the position)
+
+Delete by value
+
+Delete by position
+
+Search for a value
+
+Traverse/print the list     
+
+Reverse the list
