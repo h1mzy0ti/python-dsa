@@ -7,23 +7,26 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-    def append(self,data):
+    def append(self,data):                                      # Insert ata the ebginning or every new  will be head untill new node ocmes in
+
         new_node = Node(data)
         new_node.next = self.head
-        self.head = new_node 
+        self.head = new_node
         
     def traverse(self):
-
         current = self.head
+
         while current:
             print(current.data,end=" -> ")
             current = current.next
-        print("none") 
+        print("none")
 
 
 ll = LinkedList()
 
+ll.append(234)
 ll.append(23)
-ll.append(4)
+ll.append(2)
+ll.append(0)
 
 ll.traverse()
