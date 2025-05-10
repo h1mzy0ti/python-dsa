@@ -25,11 +25,14 @@ class LinkedList:
         current.next = new_node
 
     def search(self,data):                                              # Fucntion containing the data/ value to search
-        current = self.head
-        while current:
-            if current.data == data:
-                print(f"Yes found the value - {current.data}")
-                current = current.next
+        current = self.head                                             # Stat with the head/ first node of the linkedlist
+        while current:                                                  # if a node exists
+            if current.data == data:                                    # If the current Node's data mathes the data 
+                print(f"Yes found the value - {current.data}")          # Print out the data
+                return True                                             # For exiting the loop safely
+            current = current.next                                      # Also traverse the linkledlist by setting current.next in evey loop
+        print("Value not Found")
+        return False                                                    # For exiting the loop safely
 
 
 
