@@ -19,21 +19,21 @@ class LinkedList:
         new_node.next = self.head
         self.head = new_node
 
-    def delete(self,position):
-        current = self.head
+    def delete(self,position):                              # Typically similar to the search by value but few changes have to be made
+        current = self.head 
         previous = None
         count = 0
         
         while current:
-            if count == position:
-                if previous:
-                    previous.next = current.next
-                else:
-                    self.head = current.next
-                    return
+            if count == position:                           # if the positon is found 
+                if previous:                                # I previous is there   
+                    previous.next = current.next            # Set the previous next to the currrent next skipping the current data
+                else:                                       # Else or the head is the postion 
+                    self.head = current.next                # Connect teh head to the current.next
+                    return                                  # Return (sice unlike the delete by value we wanted to delte every element ins thell tha  is simialr to the value)
 
-            previous = current
-            current = current.next
+            previous = current                              # Until we find the positon update previous to current
+            current = current.next                          # Until we find the postion update the current to current.next so that it iterates as well
             count += 1
 
 
