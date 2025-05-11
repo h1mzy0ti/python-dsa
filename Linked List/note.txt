@@ -8,7 +8,7 @@ Insert at a given position (before the position or after the position) D
 
 Delete by value                 D
 
-Delete by position
+Delete by position              D
 
 Search for a value              D
 
