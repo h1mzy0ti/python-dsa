@@ -14,25 +14,26 @@ class LinkedList:
         self.head = None
         
     def insertAtposition(self,position,data):
-        new_node = Node(data)
-        if position == 0:
-            new_node.next = self.head
+        new_node = Node(data)                                           # New node 
+
+        if position == 0:                                               # Check is position is 0 or not if 0 it is insert at beginning 
+            new_node.next = self.head                                   # point the newnode.next o the slef.head and self.head = new_node
             self.head = new_node
             return
 
-        current = self.head
-        count = 0
+        current = self.head                                              # Start with the head 
+        count = 0                                                        # Count for tracking the postion
 
-        while current is not None and count < position - 1:
-            current = current.next
+        while current is not None and count < position - 1:              # Untill current is not noine and the count is < position - 1(before the position)
+            current = current.next                                       # Flow the loop to count by current = current.next
             count += 1
 
-        if current is None:
+        if current is None:                                              # If search the positon by the position is not found print out invalid
             print("invalid position/ position inbound")
             return
         
-        new_node.next = current.next
-        current.next = new_node
+        new_node.next = current.next                                      # Untill the condition which is count < position - 1reaches 
+        current.next = new_node                                           # Change the current next to new.node
 
     def append(self,data):
         new_node = Node(data)
