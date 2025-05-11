@@ -13,22 +13,6 @@ class LinkedList:
         self.head = new_node 
 
 
-    def delete(self, data):
-        current = self.head
-        previous = None
-        
-        while current:
-            if current.data == data:
-                if previous:
-                    previous.next = current.next
-                else:
-                    self.head = current.next
-                current = current.next
-            else:
-                previous = current
-                current = current.next
-
-
     def traverse(self):
         current = self.head
         while current:
@@ -36,28 +20,17 @@ class LinkedList:
             current = current.next
         print("none")
 
-    def get(self, index):
-        current = self.head
-        count = 0
-
-        while current:
-            if count == index:
-                return current.data
-
-            current = current.next
-            count += 1
-        
 
 
 ll = LinkedList()
 
+ll.append(5)
+ll.append(4)
 ll.append(3)
+ll.append(2)
 ll.append(1)
-ll.append(1)
-ll.append(1)
-ll.append(22)
-ll.get(0)
-ll.delete(1)
+
+ll.reverse()
 
 ll.traverse()
 
