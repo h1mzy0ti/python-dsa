@@ -34,7 +34,19 @@ class LinkedList:
         while current:
             print(current.data,end=" -> ")
             current = current.next
-        print("none") 
+        print("none")
+
+    def get(self, index):
+        current = self.head
+        count = 0
+
+        while current:
+            if count == index:
+                return current.data
+
+            current = current.next
+            count += 1
+        
 
 
 ll = LinkedList()
@@ -43,8 +55,9 @@ ll.append(3)
 ll.append(1)
 ll.append(1)
 ll.append(1)
-ll.append(1)
-
+ll.append(22)
+ll.get(0)
 ll.delete(1)
 
 ll.traverse()
+
