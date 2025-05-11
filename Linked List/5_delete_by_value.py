@@ -24,7 +24,22 @@ class LinkedList:
     def append(self,data):
         new_node = Node(data)
         new_node.next = self.head
-        self.head = new_node 
+        self.head = new_node
+
+    def delete(self,value):
+        current = self.head                                     # start with Head
+        previous = None                                         # Intialize previous to link that to current.next since we will selete the current
+
+        while current:                                          # while current is available 
+            if current.data == value:                           # And if the current.data is  = to the value we are finding
+                if previous:                                    # Also if it hase teh previous
+                    previous.next = current.next                # wepoint the previous.next = current.next (skipping the current)
+                else:                                           # If not previous most probabily it is the start of the list so we define the head to the current.next
+                    self.head = current.next
+                current = current.next                          # And also keep the search continue
+            else:                                               # if we dont find any element we continue the search by default
+                previous = current
+                current = current.next
 
 
     def traverse(self):
@@ -44,5 +59,7 @@ ll.append(1)
 ll.append(1)
 ll.append(1)
 ll.append(1)
+
+ll.delete(1)
 
 ll.traverse()
