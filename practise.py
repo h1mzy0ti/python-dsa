@@ -12,12 +12,24 @@ class LinkedList:
         new_node.next = self.head
         self.head = new_node 
 
-    def insert_at_position(self, data, position):
-        new_node = Node(data)
+
+    def delete(self, data):
+        current = self.head
+        previous = None
+        
+        while current:
+            if current.data == data:
+                if previous:
+                    previous.next = current.next
+                else:
+                    self.head = current.next
+                current = current.next
+            else:
+                previous = current
+                current = current.next
 
 
     def traverse(self):
-
         current = self.head
         while current:
             print(current.data,end=" -> ")
@@ -29,7 +41,10 @@ ll = LinkedList()
 
 ll.append(3)
 ll.append(1)
+ll.append(1)
+ll.append(1)
+ll.append(1)
 
-ll.insert_at_position(2,1)
+ll.delete(1)
 
 ll.traverse()
