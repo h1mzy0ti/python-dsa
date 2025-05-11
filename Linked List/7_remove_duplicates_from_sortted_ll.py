@@ -47,14 +47,14 @@ class LinkedList:
             current = current.next                                  # interate the loop
             
                                                                         
-    def removeDup2(self):                                           #
-        current = self.head
+    def removeDup2(self):                                           # without using previous or hashset
+        current = self.head                     
 
-        while current and current.next:
-            if current.data == current.next.data:
-                current.next = current.next.next
+        while current and current.next:                             # while current and current.next 
+            if current.data == current.next.data:                   # If current.data is same as current.next.data
+                current.next = current.next.next                    # similar to previous.next = current.next
             else:
-                current = current.next
+                current = current.next                              # if not iterate the loop
     
         
 
